@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2008
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F5034706-568F-408A-B7B3-4D38C6DB8A32}") = "FTCab", "FTCab\FTCab.pssproj", "{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FTCab.Sample", "samples\FTCab.Sample\FTCab.Sample.csproj", "{54CEFDCA-1A89-40C6-911A-86403BAEB4E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{69DA65F8-A03A-4547-B797-D27532B4FB5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +19,16 @@ Global
 		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54CEFDCA-1A89-40C6-911A-86403BAEB4E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54CEFDCA-1A89-40C6-911A-86403BAEB4E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54CEFDCA-1A89-40C6-911A-86403BAEB4E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54CEFDCA-1A89-40C6-911A-86403BAEB4E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{54CEFDCA-1A89-40C6-911A-86403BAEB4E0} = {69DA65F8-A03A-4547-B797-D27532B4FB5F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0A79630F-F5D5-472A-AC21-0602A28D5389}
