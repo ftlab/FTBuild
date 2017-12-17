@@ -7,6 +7,11 @@
     <RootNamespace>MyApplication</RootNamespace>
     <AssemblyName>MyApplication</AssemblyName>
     <Name>FTCab</Name>
+    <ManifestPath>$(OutDir)\$(ProjectName).psd1</ManifestPath>
+    <Author>FTLab</Author>
+    <CompanyName>Fintech</CompanyName>
+    <Guid>fba02ebb-1819-461d-af99-d127f5423467</Guid>
+    <ProcessorArchitecture />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -27,9 +32,8 @@
   </PropertyGroup>
   <ItemGroup />
   <ItemGroup>
-    <Compile Include="FTCab.psd1" />
-    <Compile Include="FTCab.psm1" />
-    <Compile Include="FTCab.tests.ps1" />
+    <Compile Include="PackCab.ps1" />
+    <Compile Include="UnpackCab.ps1" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Target Name="Build" />

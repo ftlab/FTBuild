@@ -1,13 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2010
+VisualStudioVersion = 15.0.27004.2008
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PS", "PS", "{4B01B878-1605-40D0-B644-278BD975FF63}"
-	ProjectSection(SolutionItems) = preProject
-		PS\BuildCab.ps1 = PS\BuildCab.ps1
-	EndProjectSection
-EndProject
 Project("{F5034706-568F-408A-B7B3-4D38C6DB8A32}") = "FTCab", "FTCab\FTCab.pssproj", "{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}"
 EndProject
 Global
