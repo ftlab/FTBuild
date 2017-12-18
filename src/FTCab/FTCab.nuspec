@@ -2,18 +2,19 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>FTCab</id>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <title>FTCab</title>
     <authors>FTLab</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>FTCab</description>
     <language />
     <contentFiles>
-      <files include="PackCab.ps1" buildAction="None" copyToOutput="true" flatten="false" />
-      <files include="UnpackCab.ps1" buildAction="None" copyToOutput="true" flatten="false" />
+      <files include="PackCab.ps1" buildAction="None" copyToOutput="true" flatten="true" />
+      <files include="UnpackCab.ps1" buildAction="None" copyToOutput="true" flatten="true" />
     </contentFiles>
   </metadata>
   <files>
-    <file src="readme.txt" target="" />
+    <file src="PackCab.ps1" target="" />
+    <file src="UnpackCab.ps1" target="" />
   </files>
 </package>
