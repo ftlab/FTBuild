@@ -6,7 +6,10 @@ param(
 , [String]$path = "C:\Users\ulyanov\Desktop\bld"
 , [String]$cabName = "Layouts")
      
+ $filePath = [System.IO.Path]::GetFullPath($filePath)
+ $path = [System.IO.Path]::GetFullPath($path)
  Write-Host $filePath;
+ Write-Host $path;
 
  $ddfFile = Join-Path -path $filePath -childpath temp.ddf
  $ddfHeader = @"
@@ -23,7 +26,7 @@ param(
 
 $ddfHeader | Out-File -filepath $ddfFile -Force -encoding default
  
- Get-ChildItem -Path $filePath -Exclude *.cs, *.ddf |
+ Get-ChildItem -Path $filePath -Exclude *.cs, *.ddf, *.cab |
  Where-Object { !$_.psiscontainer } |
  ForEach-Object{
      Write-Host "File:" $_.FullName
@@ -37,7 +40,7 @@ $ddfHeader | Out-File -filepath $ddfFile -Force -encoding default
     '.Set DestinationDir="' + $_.FullName.Replace($filePath, "").TrimStart("\\") + '"' |
      Out-File -filepath $ddfFile -encoding default -append
     
-    Get-ChildItem -Path $_.FullName -Exclude *.cs, *.ddf |
+    Get-ChildItem -Path $_.FullName -Exclude *.cs, *.ddf, *.cab |
     Where-Object { !$_.psiscontainer } |
     ForEach-Object{
         Write-Host "File:" $_.FullName
