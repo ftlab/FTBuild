@@ -46,6 +46,12 @@ $ddfHeader | Out-File -filepath $ddfFile -Force -encoding default
         Write-Host "File:" $_.FullName
         '"' + $_.FullName + '"' | Out-File -filepath $ddfFile -encoding default -append
     }
- } 
+ }
+
+ $dest = Join-Path -Path $path -ChildPath $cabName
+ $dest = $dest +".cab"
+ Set-ItemProperty $dest -name IsReadOnly -value $false
+
+ Write-Host $dest
 
  makecab /f $ddfFile /V3
